@@ -1,0 +1,8 @@
+
+{
+  "rewrites": [
+    { "source": "/", "destination": "/splash.html" },
+    { "source": "/training", "destination": "/training.html" },
+    { "source": "/tasks", "destination": "/tasks.html" }
+  ]
+}
