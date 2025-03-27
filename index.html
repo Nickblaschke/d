@@ -1,108 +1,115 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Opsly Dashboard</title>
-  <link rel="stylesheet" href="styles.css" />
+  <link rel="stylesheet" href="styles.css">
   <style>
     body {
-      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
       margin: 0;
-      padding: 0;
-      background-color: #f4f4f4;
-      color: #004c97;
-    }
-    header {
-      background-color: #004c97;
+      font-family: 'Segoe UI', sans-serif;
+      background: linear-gradient(to right, #0f1c2e, #1a2d44);
       color: white;
-      padding: 1.5rem;
-      text-align: center;
-      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
     }
-    nav {
-      background-color: #003b75;
-      display: flex;
-      justify-content: center;
-      padding: 0.75rem;
-      box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
+
+    .sidebar {
+      width: 220px;
+      background-color: #162c46;
+      height: 100vh;
+      position: fixed;
+      top: 0;
+      left: 0;
+      padding: 2rem 1rem;
+      box-shadow: 2px 0 10px rgba(0, 0, 0, 0.3);
     }
-    nav a {
+
+    .sidebar h2 {
       color: #f6b40e;
-      margin: 0 1.5rem;
-      text-decoration: none;
-      font-weight: 600;
-      font-size: 1rem;
-    }
-    nav a:hover {
-      text-decoration: underline;
-    }
-    .dashboard {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-      gap: 1.5rem;
-      padding: 2rem;
-    }
-    .card {
-      background-color: white;
-      border-radius: 16px;
-      padding: 2rem;
-      box-shadow: 0 6px 16px rgba(0, 0, 0, 0.15);
+      font-size: 1.5rem;
+      margin-bottom: 2rem;
       text-align: center;
-      transition: transform 0.2s, box-shadow 0.2s;
     }
-    .card:hover {
-      transform: scale(1.03);
-      box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
-    }
-    .card a {
-      text-decoration: none;
-      color: #004c97;
-      font-size: 1.2rem;
-      font-weight: bold;
+
+    .sidebar a {
       display: block;
-      margin-top: 1rem;
+      color: #fff;
+      text-decoration: none;
+      margin: 1rem 0;
+      padding: 0.5rem;
+      border-radius: 6px;
+      transition: background 0.3s;
     }
-    .card img {
-      width: 60px;
-      height: 60px;
+
+    .sidebar a:hover {
+      background-color: #1f3c5b;
+    }
+
+    .main {
+      margin-left: 240px;
+      padding: 2rem;
+    }
+
+    .main h1 {
+      margin-bottom: 2rem;
+    }
+
+    .kpi-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+      gap: 1.5rem;
+    }
+
+    .kpi-card {
+      background-color: #203a5d;
+      padding: 1.5rem;
+      border-radius: 10px;
+      box-shadow: 0 6px 18px rgba(0, 0, 0, 0.3);
+    }
+
+    .kpi-card h3 {
+      color: #f6b40e;
+      font-size: 1.2rem;
+      margin-bottom: 0.5rem;
+    }
+
+    .kpi-card p {
+      font-size: 1.5rem;
+      margin: 0;
+      font-weight: bold;
     }
   </style>
 </head>
 <body>
-  <header>
-    <h1>Welcome to Opsly</h1>
-    <p>Operations made simple.</p>
-  </header>
-
-  <nav>
-    <a href="index.html">Home</a>
-    <a href="training.html">Training & SOPs</a>
-    <a href="tasks.html">Task Tracker</a>
+  <div class="sidebar">
+    <h2>OPSLY</h2>
+    <a href="index.html">Dashboard</a>
+    <a href="training.html">Training</a>
+    <a href="tasks.html">Tasks</a>
+    <a href="#">Alerts</a>
     <a href="#">Ask Sopira</a>
-  </nav>
+  </div>
 
-  <main class="dashboard">
-    <div class="card">
-      <img src="https://img.icons8.com/ios-filled/100/004c97/training.png" alt="Training Icon"/>
-      <a href="training.html">Training & SOP Central</a>
+  <div class="main">
+    <h1>Welcome Back, GM</h1>
+    <div class="kpi-grid">
+      <div class="kpi-card">
+        <h3>Occupancy</h3>
+        <p>85%</p>
+      </div>
+      <div class="kpi-card">
+        <h3>Revenue</h3>
+        <p>$42,800</p>
+      </div>
+      <div class="kpi-card">
+        <h3>GOP</h3>
+        <p>$15,200</p>
+      </div>
+      <div class="kpi-card">
+        <h3>EBITDA</h3>
+        <p>$8,850</p>
+      </div>
     </div>
-    <div class="card">
-      <img src="https://img.icons8.com/ios-filled/100/004c97/task.png" alt="Tasks Icon"/>
-      <a href="tasks.html">Task Tracker</a>
-    </div>
-    <div class="card">
-      <img src="https://img.icons8.com/ios-filled/100/004c97/assistant.png" alt="AI Assistant Icon"/>
-      <a href="#">Ask Sopira</a>
-    </div>
-    <div class="card">
-      <img src="https://img.icons8.com/ios-filled/100/004c97/combo-chart.png" alt="KPI Icon"/>
-      <a href="#">KPI Dashboard</a>
-    </div>
-    <div class="card">
-      <img src="https://img.icons8.com/ios-filled/100/004c97/building.png" alt="Multi Property Icon"/>
-      <a href="#">Multi-Property Tools</a>
-    </div>
-  </main>
+  </div>
 </body>
 </html>
