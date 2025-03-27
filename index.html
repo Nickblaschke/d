@@ -81,6 +81,9 @@
   </style>
 </head>
 <body>
+  <div class="loader">
+    <img src="OPSLY (Video.gif" alt="Loading...">
+  </div>
   <div class="sidebar">
     <h2>OPSLY</h2>
     <a href="index.html">Dashboard</a>
@@ -111,5 +114,13 @@
       </div>
     </div>
   </div>
+  <script>
+    window.addEventListener('load', () => {
+      setTimeout(() => {
+        document.querySelector('.loader').style.display = 'none';
+        document.getElementById('mainContent').classList.add('loaded');
+      }, 2000);
+    });
+  </script>
 </body>
 </html>
