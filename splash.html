@@ -2,38 +2,35 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>Welcome to Opsly</title>
-  <link rel="stylesheet" href="styles.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>OPSLY Splash</title>
+  <link rel="stylesheet" href="styles.css"/>
   <style>
     body {
-      background: #0f336d;
+      margin: 0;
+      background: linear-gradient(to bottom, #0d3b66, #001f3f);
+      height: 100vh;
       display: flex;
-      flex-direction: column;
       align-items: center;
       justify-content: center;
-      height: 100vh;
-      margin: 0;
-      font-family: sans-serif;
-      color: #fdf1dc;
+      flex-direction: column;
+      color: #fcecc9;
+      font-family: Arial, sans-serif;
     }
     img {
-      width: 60%;
-      max-width: 500px;
+      width: 300px;
       opacity: 0;
-      animation: fadeInUp 2s ease forwards;
+      transform: translateY(50px);
+      animation: fadeInUp 2s forwards;
     }
     h2 {
       margin-top: 20px;
-      font-size: 1.5rem;
+      font-weight: normal;
       opacity: 0;
-      animation: fadeIn 3s ease forwards 1s;
+      animation: fadeIn 2s forwards 2s;
     }
     @keyframes fadeInUp {
-      from {
-        opacity: 0;
-        transform: translateY(50px);
-      }
       to {
         opacity: 1;
         transform: translateY(0);
@@ -47,7 +44,7 @@
   </style>
 </head>
 <body>
-  <img src="logo.png" alt="OPSLY Logo">
+  <img src="logo.png" alt="OPSLY Logo"/>
   <h2>Your Team Has You. OPSLY Has Your Back.</h2>
 </body>
 </html>
