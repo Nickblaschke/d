@@ -7,25 +7,17 @@ body.splash {
   align-items: center;
   justify-content: center;
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  color: white;
 }
 
 .splash-content {
   text-align: center;
+}
+
+.splash-logo {
+  max-width: 80%;
+  max-height: 80vh;
   opacity: 0;
   animation: fadeIn 2s ease forwards;
-}
-
-.logo {
-  font-size: 48px;
-  letter-spacing: 2px;
-  color: #fcd34d;
-  margin-bottom: 10px;
-}
-
-.tagline {
-  font-size: 20px;
-  color: #cbd5e1;
 }
 
 @keyframes fadeIn {
