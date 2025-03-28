@@ -13,9 +13,9 @@ body.splash {
   text-align: center;
 }
 
-.splash-logo {
-  max-width: 80%;
-  max-height: 80vh;
+.splash-gif {
+  max-width: 300px;
+  max-height: 300px;
   opacity: 0;
   animation: fadeIn 2s ease forwards;
 }
