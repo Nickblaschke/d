@@ -1,0 +1,35 @@
+
+body.splash {
+  margin: 0;
+  height: 100vh;
+  background: linear-gradient(to bottom, #0d1b2a, #1b263b);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  color: white;
+}
+
+.splash-content {
+  text-align: center;
+  opacity: 0;
+  animation: fadeIn 2s ease forwards;
+}
+
+.logo {
+  font-size: 48px;
+  letter-spacing: 2px;
+  color: #fcd34d;
+  margin-bottom: 10px;
+}
+
+.tagline {
+  font-size: 20px;
+  color: #cbd5e1;
+}
+
+@keyframes fadeIn {
+  to {
+    opacity: 1;
+  }
+}
